@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color</title>
+</head>
+<body>
+    <div id="text">Вітаємо на сторінці!</div>
+    <button id="button">Прибрати колір</button>
+
+    <script>
+        const textBlock = document.getElementById('text');
+        const button = document.getElementById('button');
+        let isOriginColor = true;
+
+        button.addEventListener('click', () => {
+            if (isOriginColor) {
+                textBlock.style.color = 'green';
+            } else {
+                textBlock.style.color = '';
+            }
+            isOriginColor = !isOriginColor;
+        });
+    </script>
+</body>
+</html>
