@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+</head>
+<body>
+    <img id="image" width="300">
+
+    <script>
+        function getImage() {
+            const imageCount = 9; 
+            const randomIndex = Math.floor(Math.random() * imageCount) + 1;
+            const imagePath = `images/${randomIndex}.jpg`;
+
+            return imagePath;
+        }
+
+        const imageElement = document.getElementById('image');
+        imageElement.src = getImage();
+    </script>
+</body>
+</html>
